@@ -10,37 +10,20 @@
 		}
 		#content{
             display:grid;
-           /* grid-template-columns: 20% 30% 40%; */
-            /*grid-template-columns: 1fr 2fr 1fr;*/
-            grid-template-columns: repeat(3,1fr);
-            grid-template-rows:(10, minmax(200px,auto));
-            grid-column-gap: 10px;
-            grid-row-gap: 10px;
-           /* grid-auto-rows:minmax(200px,auto);*/
+            grid-template-columns: repeat(6,1fr);
+        grid-template-rows: repeat(4,minmax(150px,auto));
+            grid-gap: 10px;
 			max-width: 960px;
-			margin: 0 auto;
-            
+			margin: 0 auto;     
             
 		}
 		#content div{
 			background: #3bbced;
-			padding: 40px;
-            
-        
+			padding: 30px;
 		}
-        
-        #content div p:hover{
-            color: black;
-            
-        }
-        
-        .text_row{
-        
-            overflow: scroll;
-        }
-        
+         
 		#content div:nth-child(even){
-			background: #777;
+            background: #777;
 			
 		}
 	</style>
@@ -51,13 +34,10 @@
 
 		<div>1</div>
 		<div>2</div>
-		<div class="text_row"><h2>FZ25</h2><p>The Yamaha FZ25's engine and cycle parts are derived from the Fazer 250 sold in Brazil but get Yamaha's Blue Core technology and is BS IV compliant. The 249cc oil-cooled and fuel-injected single-cylinder motor produces 20.9PS and 20Nm of torque. Yamaha claims a fuel efficiency figure of 43kmpl for the bike.</p></div>
+		<div>3</div>
 		<div>4</div>
-		<div class="text_row"><h2>Yamaha R15 V3</h2><p>The YYamaha R15 V3's engine and cycle parts are derived from the Fazer 250 sold in Brazil but get Yamaha's Blue Core technology and is BS IV compliant. The 249cc oil-cooled and fuel-injected single-cylinder motor produces 20.9PS and 20Nm of torque. Yamaha claims a fuel efficiency figure of 43kmpl for the bike.</p></div>
+		<div>5</div>
 		<div>6</div>
-		<div>7</div>
-		<div>8</div>
-		<div>9</div>
 
 	</div>
 
