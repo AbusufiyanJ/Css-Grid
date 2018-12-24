@@ -8,23 +8,69 @@
 			font-family: 'Nunito Semibold';
 			text-align: center;
 		}
-		#content{
+        
+        #content{
 			display: grid;
-			grid-template-rows: repeat(3, minmax(150px, auto));
-	
+            grid-template-columns:repeat(4,1fr);
+            grid-auto-rows:minmax(100px, auto));
 			grid-gap: 10px;
 			max-width: 960px;
 			margin: 0 auto;
-		}
-		#content div{
-			background: #3bbced;
+            grid-template-areas: 
+            "header header header header"
+            "footer footer footer footer"
+            "main main main main"
+            "main main main main"
+            "aside aside nav nav"
+            "section section section section"
+            "section section section section";
+            }
+        
+        @media screen and (min-width:760px){
+		  #content{
+			display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-auto-rows:minmax(100px, auto));
+			grid-gap: 10px ;
+			max-width: 960px;
+			margin: 0 auto;
+            grid-template-areas: 
+            "header header header header"
+            "aside aside main main"
+            "nav nav main main"
+            "section section section section"
+            "footer footer footer footer" ;   
+            }
+        }
+        
+		#content >*{
+			background: #333;
 			padding: 30px;
 		}
+        
+        header{
+            
+            grid-area: header;
+        }
+        main{
+            grid-area: main;
+        }
+        section{
+            grid-area: section;
+        }
+        aside{
+            grid-area:aside;
+        }
+        
+        nav{grid-area: nav;}
+         footer{grid-area: footer;}
+        
 	</style>
 </head>
 <body>
 
 	<div id="content">
+        
         <header>Header</header>
         <main>Main</main>
         <section>Section</section>
@@ -33,7 +79,7 @@
         <footer>Footer</footer>
 	
 
-	</div>
+    </div>
 
 </body>
 </html>
